@@ -1,10 +1,7 @@
 from flask import Flask, render_template, request
-from flask_login import LoginManager
 import time
 
 app = Flask(__name__)
-login_manager = LoginManager()
-login_manager.init_app(app)
 
 @app.route('/')
 def home():
@@ -46,7 +43,6 @@ def signup_page():
     return render_template('signup.html', msg=msg)
 
 @app.route('/logout')
-@app.login_required
 def logout_page():
     return render_template('logout.html')
 
