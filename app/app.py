@@ -28,7 +28,7 @@ def login_page():
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup_page():
-    msg=''
+    msg = ''
     if request.method == 'POST':
 
         username = request.form['username']
