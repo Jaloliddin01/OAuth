@@ -37,7 +37,7 @@ def signup_page():
             msg = 'Please fill out the form!'
         else:
             msg = 'Account created! Please login.'
-            time.sleep(3)
+            time.sleep(1)
             return render_template('login.html', msg=msg)           
 
     return render_template('signup.html', msg=msg)
