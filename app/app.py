@@ -11,10 +11,8 @@ def home():
 def login_page():
     msg=''
     if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
-
         username = request.form['username']
         password = request.form['password']
-
         if username == 'admin' and password == 'admin':
             return render_template('index.html')
         else:
@@ -27,10 +25,8 @@ def login_page():
 def signup_page():
     msg = ''
     if request.method == 'POST':
-
         username = request.form['username']
         password = request.form['password']
-
         if username == 'admin' and password == 'admin':
             msg = 'Account already exists!'
         elif username == '' or password == '':
